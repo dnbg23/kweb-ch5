@@ -25,9 +25,9 @@ DROP TABLE IF EXISTS `train_tickets`;
  `departure` TIME NOT NULL,
  `arrival` TIME NOT NULL,
  `distance` INT NOT NULL,
- FOREIGN KEY (`type`) REFERENCES `types`(`id`) ON DELETE CASCADE,
- FOREIGN KEY (`source`) REFERENCES `stations`(`id`) ON DELETE CASCADE,
- FOREIGN KEY (`destination`) REFERENCES `stations`(`id`) ON DELETE CASCADE
+ FOREIGN KEY (`type`) REFERENCES `train_types`(`id`) ON DELETE CASCADE,
+ FOREIGN KEY (`source`) REFERENCES `stations_name`(`id`) ON DELETE CASCADE,
+ FOREIGN KEY (`destination`) REFERENCES `stations_name`(`id`) ON DELETE CASCADE
  ) ENGINE=InnoDB;
 
  CREATE TABLE `train_users` (
@@ -40,7 +40,7 @@ DROP TABLE IF EXISTS `train_tickets`;
  `train` INT NOT NULL,
  `user` INT NOT NULL,
  `seat_number` INT NOT NULL,
- FOREIGN KEY (`train`) REFERENCES `trains`(`id`) ON DELETE CASCADE,
- FOREIGN KEY (`user`) REFERENCES `users`(`id`) ON DELETE CASCADE,
+ FOREIGN KEY (`train`) REFERENCES `trains_time`(`id`) ON DELETE CASCADE,
+ FOREIGN KEY (`user`) REFERENCES `train_users`(`id`) ON DELETE CASCADE,
  UNIQUE (`train`, `seat_number`)
  ) ENGINE=InnoDB;
