@@ -1,10 +1,10 @@
- INSERT INTO `stations` VALUES (1,'Seoul'),(2,'Busan'),(3,'GwangjuSongjeong'),
+ INSERT INTO `stations_name` VALUES (1,'Seoul'),(2,'Busan'),(3,'GwangjuSongjeong'),
  (4,'Gangneung'),(5,'Suseo'),(6,'Yeosu EXPO');
 
- INSERT INTO `types` VALUES (1,'KTX',8,15524),(2,'SRT',8,13712),(3,'KTX-Eum',7,14095),
+ INSERT INTO `train_types` VALUES (1,'KTX',8,15524),(2,'SRT',8,13712),(3,'KTX-Eum',7,14095),
  (4,'ITX-Saemaeul',6,9645),(5,'Mugunghwa',5,6475);
 
- INSERT INTO `trains` VALUES (1,4,6,1,'08:55','13:24',4299),
+ INSERT INTO `trains_time` VALUES (1,4,6,1,'08:55','13:24',4299),
  (2,1,1,2,'14:30','17:11',4174),(3,3,4,1,'18:40','20:51',2231),
  (4,1,2,1,'08:20','11:32',4174),(5,2,3,5,'13:00','14:37',2905),
  (6,3,1,4,'09:01','10:57',2231),(7,1,2,1,'16:38','19:12',4174),
@@ -16,7 +16,8 @@
  (18,1,1,3,'17:38','19:20',3078),(19,1,6,1,'18:05','21:18',4299),
  (20,3,1,4,'19:01','21:06',2231);
 
- INSERT INTO `users` VALUES (1,'Kelda'),(2,'Jaqueline'),(3,'Jaymes'),(4,'Elicia'),
+ INSERT INTO `train_users` ('id', 'name') VALUES 
+ (1,'Kelda'),(2,'Jaqueline'),(3,'Jaymes'),(4,'Elicia'),
  (5,'Lenny'),(6,'Sissy'),(7,'Joni'),(8,'Axl'),(9,'Kenyon'),(10,'Marmaduke'),
  (11,'Deanna'),(12,'Baldric'),(13,'Lorn'),(14,'Jayla'),(15,'Ellery'),(16,'Karen'),
  (17,'Candis'),(18,'Charli'),(19,'Clint'),(20,'Phillip'),(21,'Glanville'),
@@ -25,8 +26,8 @@
  (34,'Bill'),(35,'Jena'),(36,'Lola'),(37,'Journey'),(38,'Hylda'),(39,'Norah'),
  (40,'Davy'),(41,'Trixie'),(42,'Alysia'),(43,'Karrie'),(44,'Dolph'),(45,'Wil'),
  (46,'Roland'),(47,'Gayle'),(48,'Cindi'),(49,'Keila'),(50,'Asher');
- 
- INSERT INTO `tickets` VALUES (1,17,1,8),(2,14,2,4),(3,4,3,3),(4,2,3,5),(5,4,4,2),
+
+ INSERT INTO `train_tickets` VALUES (1,17,1,8),(2,14,2,4),(3,4,3,3),(4,2,3,5),(5,4,4,2),
  (6,2,4,1),(7,19,5,3),(8,10,6,4),(9,3,7,5),(10,19,8,4),(11,8,9,1),(12,18,9,8),
  (13,17,10,6),(14,11,11,3),(15,16,11,6),(16,18,11,5),(17,11,12,4),(18,16,12,4),
  (19,18,12,6),(20,15,13,4),(21,4,14,8),(22,2,14,2),(23,11,15,1),(24,13,15,5),
